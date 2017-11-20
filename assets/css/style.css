@@ -5,41 +5,87 @@ body {
 .personnages {
   display: grid;
   grid-gap: 10px;
+  grid-auto-rows: minmax(100px,auto);
   background-color: #fff;
-  color: #444;
+  color: #152;
   grid-template-areas:
       "hero"
       "accolyte-a"
       "accolyte-b"
       "mineur-a"
       "mineur-b"
-      "mineur-c";
+      "mineur-c"
+      "mineur-d"
+      "mineur-e"
+      "mineur-f";
     
 }
+
+
+
+
 .personnage {
-  background-color: #444;
+  background-color: #E78E97;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
 }
-.personnage-hero {
-  background-color: #032;
+.personnage-finn {
+  background-color: #00ADE3 ;
   grid-area: hero;
  
 }
-.personnage-joueur-b {
+.personnage-jack {
   grid-area: accolyte-a;
+    background-color: #FCB823;
 }
-.personnage-joueur-c {
+.personnage-beemo {
   grid-area: accolyte-b;
+    background-color: #BAE0CD;
 }
-.personnage-joueur-d {
+.personnage-marceline {
   grid-area: mineur-a;
+    background-color: #EEF1F3;
 }
-.personnage-joueur-e {
+.personnage-miss-rainicorn {
   grid-area: mineur-b;
+    background-color: #E0ABCE;
 }
-.personnage-joueur-f {
+.personnage-princesse-chewingum {
   grid-area: mineur-c;
+    background-color: #E7CEE3;
 }
+
+.personnage-princesse-des-flammes {
+  grid-area: mineur-d;
+    background-color: #FFA300;
+}
+
+.personnage-princesse-lumpy-space {
+  grid-area: mineur-e;
+    background-color: #BB9DC8;
+}
+.personnage-roi-des-glaces {
+  grid-area: mineur-f;
+    background-color: #A3D8F5;
+}
+
+/* la zone reserve au media queries */
+@media screen and (min-width:640px) {
+    .personnages{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "hero accolyte-a"
+            "accolyte-b mineur-a"
+            "accolyte-b mineur-a"
+            "mineur-b mineur-b"
+            "mineur-e mineur-c"
+            "mineur-d mineur-d"
+            "mineur-f mineur-f"
+            ;
+    }
+}
+img{width: 100px;height: 100px;display: block;
+    margin-left: auto;
+    margin-right: auto}
